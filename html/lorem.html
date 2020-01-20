@@ -4,11 +4,51 @@
   <head>
     <metal charset="utf-8">
     <title>Lorem News</title>
+    <style>
+      body{
+        font-family:"Segoe UI",sans-serif;
+        padding: 1%;
+      }
+      header{
+        background:#e9ecef;
+        text-align:center;
+        padding-top: 0.25%;
+        padding-bottom:1.5;
+      }
+      #motto{
+        font-style:italic;
+      }
+
+      main{
+        width: 75%;
+        float: left;
+      }
+      nav{
+        width:23%;
+        float: right;
+      }
+      main img{
+        float: left;
+        margin-right:2%;
+      }
+      nav ul{
+        list-style: none;
+        padding:0;
+      }
+      nav li{
+        padding: 5%;
+        boarder: 1px solid #e9ecef;
+      }
+      .article{
+        color:#007bff;
+        text-decoration:none;
+      }
+    </style>
   </head>
   <body>
     <header>
       <h1>Lorem News</h1>
-      <span> The real fake news</span>
+      <span id="motto"> The real fake news</span>
     </header>
     <main>
       <article>
@@ -20,14 +60,15 @@
           Ut in fringilla sapien. Fusce consequat eros justo, non ullamcorper est congue vel.
         </p>
       </article>
-      <nav>
-        <ul>
-          <li><a href="#"></a>Donec a lorem id dolor sodales facilisis et eu erat.</li>
-          <li><a href="#"></a>Donec nec nibh varius, volutpat sem rhoncus, mattis justo.</li>
-          <li><a href="#"></a>Pellentesque tristique lectus sed risus facilisis, at rutrum urna ultrices.</li>
-          <li><a href="#"></a>Curabitur lobortis dolor a lorem auctor fermentum.</li>
-        </ul>
-      </nav>
     </main>
+    <nav>
+        <h2>See also</h2>
+        <ul>
+          <li><a href="#" class="article"></a>Donec a lorem id dolor sodales facilisis et eu erat.</li>
+          <li><a href="#" class="article"></a>Donec nec nibh varius, volutpat sem rhoncus, mattis justo.</li>
+          <li><a href="#" class="article"></a>Pellentesque tristique lectus sed risus facilisis, at rutrum urna ultrices.</li>
+          <li><a href="#" class="article"></a>Curabitur lobortis dolor a lorem auctor fermentum.</li>
+        </ul>
+    </nav>
   </body>
 </html>
