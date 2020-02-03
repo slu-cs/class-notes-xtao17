@@ -9,7 +9,7 @@ console.log(avg(5,6));
 //Another definition
 
 const print=function(a,b){
-  console.log(`a=${a},b=${b});
+  console.log(`a=${a},b=${b}`);
 };
 
 //Undefined values
