@@ -1,34 +1,45 @@
-//Object and array syntax
-//Oject literal
-const point={x:1,y:2};
+// Object and array syntax
+
+// Object literal
+const point = {x: 1, y: 2};
 console.log(point);
-//Accessing properties
+
+// Accessing properties
 console.log(point.x);
-//Changing properties
-point.x=3;
-//Nested object literal
-const circle={
+
+// Changing properties
+point.x = 3;
+
+// Nested object literal
+const circle = {
   center: point,
-  result:4
+  radius: 4
 };
-//Accessing subproperties
+
+// Accessing subproperties
 console.log(circle.center.x);
-//indefined subproperties
+
+// Undefined subproperties
 console.log(circle.color);
-circle.color='blue';
+circle.color = 'blue';
 console.log(circle);
-//array
-const languages=['HTML','CSS','JS'];
+
+// Array
+const languages = ['HTML', 'CSS', 'JS'];
 console.log(languages);
-for(let i=0;i<language.length;i++){
+
+// Accessing length and elements
+for (let i = 0; i < languages.length; i++) {
   console.log(languages[i]);
 }
-//Changing elements
-languages[2]='JavaScript';
-//Adding elements
+
+// Changing elements
+languages[2] = 'JavaScript';
+
+// Adding elements
 languages.push('MongoDB');
 
-//Iterating over elements
-for(const lang of languages){
+// Iterating over elements
+for (const lang of languages) {
   console.log(lang);
 }
