@@ -7,7 +7,7 @@ console.log(point.x);
 //Changing properties
 point.x=3;
 //Nested object literal
-cost circle={
+const circle={
   center: point,
   result:4
 };
@@ -17,3 +17,18 @@ console.log(circle.center.x);
 console.log(circle.color);
 circle.color='blue';
 console.log(circle);
+//array
+const languages=['HTML','CSS','JS'];
+console.log(languages);
+for(let i=0;i<language.length;i++){
+  console.log(languages[i]);
+}
+//Changing elements
+languages[2]='JavaScript';
+//Adding elements
+languages.push('MongoDB');
+
+//Iterating over elements
+for(const lang of languages){
+  console.log(lang);
+}
