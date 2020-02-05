@@ -70,6 +70,6 @@ const range=function(a,b){
   }
   console.log(lon);
 }
-range(0);
+range(6);
 range(1,5);
 range();
