@@ -3,7 +3,7 @@
 //Iterate through this array to find the largest course number in your schedule.
 const course=[{subject:'cs',number:332},{subject:'cs',number:4006},{subject:'env',number:110}];
 let l=0;
-for(const c in course){
+for(const c of course){
   if(c.number>l){
     l=c.number
   }
