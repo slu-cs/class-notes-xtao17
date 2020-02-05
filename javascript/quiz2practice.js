@@ -42,5 +42,5 @@ Book.prototype.checkbook=function(name){
   }
   return false;
 };
-const abook=new Book("a","Xin");
+const abook=new Book("a",["Xin","Tao"]);
 console.log (abook.checkbook("Xin"));
