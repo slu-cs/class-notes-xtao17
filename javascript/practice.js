@@ -3,7 +3,7 @@ const odds = numbers.filter(x => x%2 > 0);
 console.log(odds)
 const filter=function(numbers,f){
   const copy=[];
-  for(const element of array){
+  for(const element of numbers){
     copy.push(f(element));
   }
   return copy;
