@@ -35,8 +35,8 @@ const Book=function(title,author){
 };
 
 Book.prototype.checkbook=function(name){
-  for(let i=0;i<Book.author.length;i++){
-    if(author[i]===name){
+  for(const author1 of this.author){
+    if(author1===name){
       return True;
     }
   }
