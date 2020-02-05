@@ -37,10 +37,10 @@ const Book=function(title,author){
 Book.prototype.checkbook=function(name){
   for(const author1 of this.author){
     if(author1===name){
-      return True;
+      return true;
     }
   }
-  return False;
+  return false;
 };
 const abook=new Book("a","Xin");
 console.log (abook.checkbook("Xin"));
