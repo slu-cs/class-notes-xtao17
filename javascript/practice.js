@@ -33,7 +33,7 @@ const Book=function(book,authors){
 }
 Book.prototype.check=function(author){
   for(let i=0;i<this.authors.length;i++){
-    if(authors[i]===author){
+    if(this.authors[i]===author){
       return true;
     }
   }
