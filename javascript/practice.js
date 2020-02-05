@@ -20,5 +20,5 @@ console.log(aroaster.names);
 const labs=[{location:"Bewkes 105", seats:10},{location:"Bewkes 107", seats:1}];
 for(lab of labs){
   labs.seats=labs.seats*2;
+  console.log(labs.seats);
 }
-console.log(labs[0].seats);
