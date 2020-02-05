@@ -56,7 +56,7 @@ const range=function(a,b){
     lowb=0;
     highb=0;
   }
-  else if(a===undefined){
+  else if(a!==undefined&&b===undefined){
     lowb=0;
     highb=b;
   }
