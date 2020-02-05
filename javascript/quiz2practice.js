@@ -58,7 +58,7 @@ const range=function(a,b){
   }
   else if(a!==undefined&&b===undefined){
     lowb=0;
-    highb=b;
+    highb=a;
   }
   else{
     lowb=a;
