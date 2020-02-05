@@ -1,4 +1,5 @@
-const a=function(b,c){
-  console.log(`b=${b},c=${c}`)
+const k=function(a,b){
+
+  return a ** b;
 }
-console.log(a(20,11))
+console.log(k);
