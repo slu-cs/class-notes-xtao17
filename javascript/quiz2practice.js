@@ -44,3 +44,32 @@ Book.prototype.checkbook=function(name){
 };
 const abook=new Book("a",["Xin","Tao"]);
 console.log (abook.checkbook("Xin"));
+console.log(abook.checkbook("TTT"));
+
+//Define a function that works like the range function in Python.
+//For example, range(5) returns [0,1,2,3,4] and range(3,8) returns [3,4,5,6,7].
+
+const range=function(a,b){
+  let lowb=0;
+  let highb=0
+  if(a===undefined&&b===undefined){
+    lowb=0;
+    highb=0;
+  }
+  else if(a===undefined){
+    lowb=0;
+    highb=b;
+  }
+  else{
+    lowb=a;
+    highb=b;
+  }
+  const lon=[];
+  for(let i=lowb;i<highb;i++){
+    lon.push(i);
+  }
+  console.log(lon);
+}
+range(0);
+range(1,5);
+range();
