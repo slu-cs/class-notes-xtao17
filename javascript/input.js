@@ -15,3 +15,6 @@ const user= readline.createInterface({
 user.question('Filename:',function(filename){
   console.log(filename);
 })
+
+//This part will not happen
+console.log('here');
