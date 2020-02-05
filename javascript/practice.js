@@ -8,6 +8,6 @@ const filter=function(numbers,f){
   }
   return copy;
 }
-const numbers = [1, 2, 3, 4, 5];
-const odds1 = filter(numbers, x => x%2 > 0);
+const number= [1, 2, 3, 4, 5];
+const odds1 = filter(number, x => x%2 > 0);
 console.log(odds1)
