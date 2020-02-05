@@ -13,7 +13,7 @@ const aroaster=new Roaster(1);
 aroaster.addname("Xin");
 console.log(aroaster.names);
 console.log(aroaster.maxstud);
-console.log(aroaster.addname("Tao");
+console.log(aroaster.addname("Tao"));
 console.log(aroaster.names);
 
 
