@@ -1,24 +1,13 @@
-const Roaster=function(maxstud){
-  this.names=[];
-  this.maxstud=maxstud;
-}
-Roaster.prototype.addname=function(aname){
-  if(this.names.length<this.maxstud){
-    this.names.push(aname);
-    return true;
+const numbers = [1, 2, 3, 4, 5];
+const odds = numbers.filter(x => x%2 > 0);
+console.log(odds)
+const filter=function(numbers,f){
+  const copy=[];
+  for(const element of array){
+    copy.push(f(element));
   }
-  return false;
+  return copy;
 }
-const aroaster=new Roaster(1);
-aroaster.addname("Xin");
-console.log(aroaster.names);
-console.log(aroaster.maxstud);
-console.log(aroaster.addname("Tao"));
-console.log(aroaster.names);
-
-
-const labs=[{location:"Bewkes 105", seats:10},{location:"Bewkes 107", seats:1}];
-for(lab of labs){
-  labs.seats=labs.seats*2;
-  console.log(labs.seats);
-}
+const numbers = [1, 2, 3, 4, 5];
+const odds1 = filter(numbers, x => x%2 > 0);
+console.log(odds1)
