@@ -10,4 +10,3 @@ const filter=function(numbers,f){
 }
 const number= [1, 2, 3, 4, 5];
 const odds1 = filter(number, x => x%2 > 0);
-console.log(odds1)
