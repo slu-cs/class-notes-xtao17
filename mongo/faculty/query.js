@@ -1,3 +1,4 @@
+
 // Query the faculty database
 
 const mongoose = require('mongoose');
@@ -9,6 +10,6 @@ connect(); // To the database
 // What documents are in the collection?
 const query = Professor.find();
 query.exec(function(error, professors) {
-  if (error) console.error(error.stack);
-  console.log(professors);
+if (error) console.error(error.stack);
+console.log(professors);
 });
