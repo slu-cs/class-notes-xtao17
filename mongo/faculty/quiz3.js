@@ -27,4 +27,4 @@ const filter=function(array,transform){
 }
 
 const newf = filter(numbers, x => x%2 > 0);
-console.console.log(newf);
+console.log(newf);
