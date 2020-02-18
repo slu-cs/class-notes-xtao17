@@ -36,4 +36,4 @@ console.log(newf);
 //Try it out, and read about how it works. Then rewrite the arrow function to reverse sort the array instead.
 
 const numbersaa = [4, 2, 5, 1, 3];
-console.log(numbersaa.sort((a,b) => a - b));
+console.log(numbersaa.sort((a,b) => b - a));
