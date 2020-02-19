@@ -50,36 +50,3 @@ console.log(numbersaa.sort((a,b) => b - a));
 // and afterwards run q2 and print the result.
 
 // How can we do this without promises?
-
-
-
-
-q1.exec(function(error, r1) {
-  if (error) console.log(error.stack);
-  console.log(r1);
-
-  q2.exec(function(error, r2) {
-    if (error) console.log(error.stack);
-    console.log(r2);
-  });
-});
-
-
-
-
-q1.exec()
-  .then(function(r1){
-    console.log(r1);
-    return q2.exec();
-  })
-  .then(r2=>console.log(r2))
-  .catch(error=>console.log(error.stack));
-
-
-
-  // Suppose documents is an array of Mongoose documents that have been created but not saved.
-  // You want to save them all at once (that is, in parallel). Write some code to do this.
-const saves=documents.map(d=>d.save());
-Promise.saveall(saves)
-  .then(()=>console.log('all saved'))
-  .catch(error=>error.stack);
