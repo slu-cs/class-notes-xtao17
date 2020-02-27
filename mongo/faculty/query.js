@@ -29,6 +29,7 @@ const queries = [
 
   // What are all the ranks?
   Professor.distinct('rank')
+
 ];
 
 // Run the queries in parallel
