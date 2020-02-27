@@ -11,7 +11,7 @@ const seat=labs.map(lab=>lab.seats)
 const more_than_10_lab=labs.filter(lab=>lab.seats>10)
 
 // C. Sort the existing array in order of (increasing) seat numbers (by invoking the built-in sort method).
-labs=labs.sort((a,b)=>a.seats-b.seats)
+labs.sort((a,b)=>a.seats-b.seats)
 console.log(seat)
 console.log(more_than_10_lab)
-console.log(labs)
+console.log(labs.sort((a,b)=>a.seats-b.seats))
