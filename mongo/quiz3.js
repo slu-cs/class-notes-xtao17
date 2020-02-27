@@ -15,17 +15,23 @@ const seat=labs.map(lab=>lab.seats)
 const more_than_10_lab=labs.filter(lab=>lab.seats>10)
 
 // C. Sort the existing array in order of (increasing) seat numbers (by invoking the built-in sort method).
-labs=labs.sort((a,b)=>a.seats-b.seats)
+labs.sort((a,b)=>a.seats-b.seats)
 
 //////////////////////////////////////////////////////////////// Question 2
 
 const numbers = [5, 4, 3, 2, 1];
 
 // A. Get the first even number (by invoking the built-in find method).
-
+numbers.find(n=>n%2===0)
 
 // B. Define a standalone find function. The array is its first argument and the callback is its second argument.
-
+const find=function(array,condition){
+  for(const element of array){
+    if(condition(element)){
+      return element;
+    }
+  }return undefined;
+};
 
 //////////////////////////////////////////////////////////////// Question 3
 
@@ -47,6 +53,7 @@ user.question('What is your name?',function(r1){
 
 // The user.question method doesn't actually return a promise, so here is a question function that does.
 // Call this question function in part B instead of calling the user.question method.
+/*
 const question = function(prompt) {
   return new Promise(resolve => user.question(prompt, resolve));
 };
@@ -58,11 +65,10 @@ user.question('What is your name?')
     return user.question('How are you doing?')
   })
   .then(r2=>console.log('I am also'+r2+'.'))
-
-//////////////////////////////////////////////////////////////// Question 4
+*/
 // Question 4 is commented out because otherwise it would interfere with Question 3.
 // When you're ready to work on Question 4, uncomment it and comment out Question 3.
-/*
+
 // This function returns a promise, which produces 42 after an asynchronous delay of one second.
 const f1 = function() {
   return new Promise(resolve => setTimeout(() => resolve(42), 1000));
@@ -74,6 +80,8 @@ const f2 = function() {
 };
 
 // Run f1 and f2 in parallel and log 'f1', 'f2', or 'equal' to indicate which function returned the larger result.
-
-
-*/
+Promise.all(f1,f2)
+  .then(function(r1,r2){
+    if(r1>r2)
+      con
+  })
