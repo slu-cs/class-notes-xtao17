@@ -42,3 +42,13 @@ Promise.all(queries)
     console.log('Distinct ranks: ', results[4]);
     mongoose.connection.close();
   }).catch(error => console.error(error.stack));
+
+
+
+
+  f('hello', function(error, result) {
+    if (error) console.error(error.stack);
+    console.log(result);
+  });
+  Promise=async_call(f);
+  .then(function(error,result))
