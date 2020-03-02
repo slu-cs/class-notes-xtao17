@@ -1,0 +1,90 @@
+<!-- Bootstrap styling demo -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container-fluid">
+      <header class="jumbotron text-center p-3 mb-3">
+        <h1>To-do List</h1>
+      </header>
+    <form>
+      <input type="text" name="To-do">
+      <button type="submit">Add</button>
+      <button type="submit">Delete</button>
+    </form>
+  </div>
+  <div id="history"></div>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script>
+
+    // Number of times the form has been submitted
+    let counter = 0;
+
+    // Respond to submit events
+    $('form').on('submit', function(event) {
+      const form = $(this); // JQuery object representing the form
+      event.preventDefault(); // Don't really submit the form
+
+      // Create a new list
+      const list = $('<ul></ul>');
+
+      // Translate each input value into a list item
+      const inputs = form.find('input'); // JQuery object represent all inputs
+      for (let input of inputs) {
+        input = $(input); // Turn into a JQuery object
+        const li = $(`<li>${input.val()} <button type="delete">Delete</button>  </li>`); // New list item
+        list.append(li);
+        input.val(''); // Empty out the box
+      }
+
+      counter++;
+      const p = $(`<p>Submit #${counter}</p>`);
+
+      // Add to the page
+      $('#history').append(list);
+    });
+
+
+    $('form').on('delete', function(event) {
+      const form = $(this); // JQuery object representing the form
+      event.preventDefault(); // Don't really submit the form
+
+      // Create a new list
+      const list = $('<ul></ul>');
+
+      // Translate each input value into a list item
+      const inputs = form.find('input'); // JQuery object represent all inputs
+      for (let input of inputs) {
+        input = $(input); // Turn into a JQuery object
+        const li = $(`<li>${input.val()} <button type="delete">Delete</button>  </li>`); // New list item
+        list.remove(li);
+      }
+
+      counter--;
+      const p = $(`<p>Submit #${counter}</p>`);
+
+      // Add to the page
+      $('#history').append(list);
+    });
+    $(document).on('click', 'img', function(event) {
+      const img = $(this);
+      const id = img.attr('id');
+      console.log('Clicked image', id);
+    });
+
+
+
+
+    </script>
+
+
+
+
+
+
+  </body>
+</html>
