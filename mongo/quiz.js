@@ -62,7 +62,7 @@ const question = function(prompt) {
 // B. Make small talk again, using promises.
 question('What is your name?')
   .then(function(r1){
-    console.log('Hello'+r1+'.');
+    console.log('Hello '+r1+'.');
     return user.question('How are you doing?');
 
   })
@@ -71,7 +71,7 @@ question('What is your name?')
 //////////////////////////////////////////////////////////////// Question 4
 // Question 4 is commented out because otherwise it would interfere with Question 3.
 // When you're ready to work on Question 4, uncomment it and comment out Question 3.
-/*
+
 // This function returns a promise, which produces 42 after an asynchronous delay of one second.
 const f1 = function() {
   return new Promise(resolve => setTimeout(() => resolve(42), 1000));
@@ -96,4 +96,3 @@ Promise.all(function)
     console.log('equal');
   }
 })
-*/
